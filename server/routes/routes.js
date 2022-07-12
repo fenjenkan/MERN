@@ -1,4 +1,6 @@
 const express = require('express')
+const {createWorkout} = require('../controllers/controller.js')
+
 
 const router = express.Router()
 //get all
@@ -10,9 +12,7 @@ router.get('/:id', (req,res) => {
     res.json({mssg:'Get single route'})
 })
 //post route
-router.post('/', (req,res) => {
-    res.json({mssg:'Post new route'})
-})
+router.post('/', createWorkout)
 //Delete
 router.delete('/:id', (req,res) => {
     res.json({mssg:'Delete new route'})
