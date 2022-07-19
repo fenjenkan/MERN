@@ -16,7 +16,7 @@ app.use('/api/routes',routers)
 mongoose.connect(process.env.CONNECTION_URI)
     .then(() => {
         app.listen(process.env.PORT, () => {
-            console.log("Server up")
+            console.log(`server up at ${process.env.PORT}`)
         })
     })
     .catch((error) => {
